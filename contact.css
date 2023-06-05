@@ -1,0 +1,276 @@
+* {
+    padding: 0%;
+    margin: 0;
+}
+
+:root {
+    --yellow: #f9d806;
+    --light-yellow: #ffee80;
+    --black: #130f40;
+    --light-color: #666;
+    --border: .1rem solid rgba(245, 242, 242, 0.1);
+    --box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /* font-family: 'Inter', sans-serif; */
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.heading {
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 4.5rem;
+    color: var(--black);
+}
+
+.heading span {
+    position: relative;
+    z-index: 0;
+}
+
+.heading span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--yellow);
+}
+/* Header Section  */
+.container {
+
+    background: #fff;
+    position: fixed;
+    width: 81.99%;
+    z-index: 999;
+    display: flex;
+    float: right;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    height: 5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.container a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+}
+
+/* Logo Style  */
+.logo {
+    font-size: 2.5rem;
+
+}
+
+.logo span {
+    color: var(--yellow);
+}
+
+/* Nav Style  */
+.navbar {
+    display: flex;
+    text-decoration: none;
+    font-size: 2rem;
+    list-style: none;
+}
+
+.navbar li {
+    padding: 2.5rem;
+}
+
+.navbar li a {
+    font-weight: 600;
+}
+
+.navbar li a:hover {
+    color: var(--yellow);
+    transition: all 0.3s;
+}
+
+
+/* Login Button Style  */
+
+.login-btn {
+    padding: 5px;
+    width: 7rem;
+    border: 1.5px solid var(--light-color);
+    border-radius: 0.5rem;
+    background-color: var(--light-yellow);
+    cursor: pointer;
+
+}
+
+.login-btn:hover {
+    background-color: var(--yellow);
+}
+
+/* login form section  */
+.login-form-container {
+    position: fixed;
+    top: 105%;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.login-form-container.active {
+    top: 0;
+    opacity: 1;
+}
+
+
+.login-form-container form {
+
+    padding: 2rem;
+    margin: 2rem;
+    background: #fff;
+    border: 2px solid rgba(245, 242, 242, 0.1);
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 35rem;
+}
+
+
+.btn {
+    padding: 0.8rem;
+    width: 13rem;
+    border: 1px solid var(--light-yellow);
+    background-color: var(--yellow);
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    padding: 1rem .8rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    border: 1px solid var(--yellow);
+    background-color: var(--light-yellow);
+
+}
+
+.login-form-container form .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-form-container form .btn {
+    display: block;
+    width: 100%;
+
+}
+
+.login-form-container form .buttons .btn {
+    display: block;
+    margin: .5rem 0;
+    width: 100%;
+
+
+}
+
+.login-form-container form h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.login-form-container form .box {
+    margin: .7rem 0;
+    width: 90%;
+    color: var(--black);
+    font-size: 1.6rem;
+    padding: 1rem 1.2rem;
+    border: 2px solid rgba(245, 242, 242, 0.9);
+    border-radius: 0.5rem;
+}
+
+.login-form-container form p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+
+.login-form-container form p a {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-form {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+
+/* contact section starts  */
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.contact .row .map {
+    flex: 1 1 42rem;
+    width: 100%;
+    height: 42.5rem;
+    padding: 2rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background-color: #fdfdfd;
+}
+
+.contact .row form {
+    flex: 1 1 42rem;
+    padding: 2rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    background-color: #fdfdfd;
+}
+
+.contact .row form h3 {
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.contact .row form .box {
+    margin: .7rem 0;
+    width: 55rem;
+    border: .1rem solid rgba(102, 102, 102, .15);
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: var(--black);
+    border-radius: .5rem;
+}
+
+.contact .row form textarea {
+    height: 15rem;
+}

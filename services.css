@@ -1,0 +1,300 @@
+* {
+    padding: 0%;
+    margin: 0;
+}
+
+:root {
+    --yellow: #f9d806;
+    --light-yellow: #ffee80;
+    --black: #130f40;
+    --light-color: #666;
+    --border: .1rem solid rgba(245, 242, 242, 0.1);
+    --box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /* font-family: 'Inter', sans-serif; */
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+/* Header Section  */
+.container {
+
+    background: #fff;
+    position: fixed;
+    width: 81.99%;
+    z-index: 999;
+    display: flex;
+    float: right;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    height: 5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.container a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+}
+
+/* Logo Style  */
+.logo {
+    font-size: 2.5rem;
+
+}
+
+.logo span {
+    color: var(--yellow);
+}
+
+/* Nav Style  */
+.navbar {
+    display: flex;
+    text-decoration: none;
+    font-size: 2rem;
+    list-style: none;
+}
+
+.navbar li {
+    padding: 2.5rem;
+}
+
+.navbar li a {
+    font-weight: 600;
+}
+
+.navbar li a:hover {
+    color: var(--yellow);
+    transition: all 0.3s;
+}
+
+
+/* Login Button Style  */
+
+.login-btn {
+    padding: 5px;
+    width: 7rem;
+    border: 1.5px solid var(--light-color);
+    border-radius: 0.5rem;
+    background-color: var(--light-yellow);
+    cursor: pointer;
+
+}
+
+.login-btn:hover {
+    background-color: var(--yellow);
+}
+
+/* login form section  */
+.login-form-container {
+    position: fixed;
+    top: 105%;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.login-form-container.active {
+    top: 0;
+    opacity: 1;
+}
+
+
+.login-form-container form {
+
+    padding: 2rem;
+    margin: 2rem;
+    background: #fff;
+    border: 2px solid rgba(245, 242, 242, 0.1);
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 35rem;
+}
+
+
+.btn {
+    padding: 0.8rem;
+    width: 13rem;
+    border: 1px solid var(--light-yellow);
+    background-color: var(--yellow);
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    padding: 1rem .8rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    border: 1px solid var(--yellow);
+    background-color: var(--light-yellow);
+
+}
+
+.login-form-container form .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-form-container form .btn {
+    display: block;
+    width: 100%;
+
+}
+
+.login-form-container form .buttons .btn {
+    display: block;
+    margin: .5rem 0;
+    width: 100%;
+
+
+}
+
+.login-form-container form h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.login-form-container form .box {
+    margin: .7rem 0;
+    width: 90%;
+    color: var(--black);
+    font-size: 1.6rem;
+    padding: 1rem 1.2rem;
+    border: 2px solid rgba(245, 242, 242, 0.9);
+    border-radius: 0.5rem;
+}
+
+.login-form-container form p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+
+.login-form-container form p a {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-form {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+/* services section  */
+
+.heading {
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 4.5rem;
+    color: var(--black);
+}
+
+.heading span {
+    position: relative;
+    z-index: 0;
+}
+
+.heading span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--yellow);
+}
+
+
+.services {
+    margin-top: 5rem;
+}
+.services h4{
+    font-size: 4rem;
+    color: var(--black);
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 1rem;
+    margin: 3rem;
+}
+
+.services .box-container .box {
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+}
+
+.services .box-container .box i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    color: var(--black);
+    background: var(--yellow);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.services .box-container .box a {
+    position: relative;
+    top: .5rem;
+}
+
+.services .box-container .box h3 {
+    color: var(--black);
+    font-size: 2.2rem;
+}
+
+.services .box-container .box p {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    padding: 1rem 0rem;
+    line-height: 1.4;
+}
+
+.services .box-container .box .btn {
+    padding: .8rem 1.8rem;
+}
+
+.services .box-container .box:hover {
+    background: var(--black);
+    color: #fff;
+}
+
+.services .box-container .box:hover h3 {
+    color: #fff;
+}
+
+.services .box-container .box:hover p {
+    color: #eee;
+}
